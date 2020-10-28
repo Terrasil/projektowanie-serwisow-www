@@ -18,7 +18,7 @@ projektowanie-serwisow-www
 W folderze **/obrazy** znajduje się zdjęcie **piotr-i-maria.png** wykorzystyanie w podstronie przedstawiającą strone z podręcznika.
 
 ## Strona główna
-![Strona główna](https://i.imgur.com/WMnag12.png)
+![Strona główna](https://i.imgur.com/L6VxNXe.png)
 
 Strona głowna przedstawia zastosowane technologie. Każda technologia jest opisana i przedstawiony jest jej logotyp.
 
