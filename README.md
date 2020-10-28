@@ -3,7 +3,6 @@ projektowanie-serwisow-www
 
 ### Autor: Patryk Morawski, 185ic_b1
 
-# projektowanie-serwisow-www-Reszke-185ic
 - W folderze **lab1** znajdują sie pliki ze zrobionym pierwszym zadaniem.
 
 - Plik **style.css** odpowiada za styl elementów strony.
