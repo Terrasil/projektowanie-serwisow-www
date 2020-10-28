@@ -2,9 +2,30 @@
 <html lang="pl">
     <head>
         <meta charset="utf-8">
-        <title>Patryk Morawski - Projektowanie serwisów WWW | Laboratorium 1</title>
-    </head>
+        <title>Patryk Morawski - Projektowanie serwisów WWW | Laboratorium 1 - Strona główna</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" type="text/javascript"></script>
+   </head>
     <body>
-        Lorem ipsum
+        <header>
+            <a href="../index.html" class="wroc">🡴</a>
+            <h1><br>Patryk<br>MORAWSKI</h1>
+            <nav>
+                <ul class="topnav">
+                    <li><a class="aktywny" href="index.html">Strona główna</a></li>
+                    <li class="prawa"><a href="list.html">List</a></li>
+                    <li class="prawa"><a href="podrecznik.html">Podręcznik</a></li>
+                    <li class="prawa"><a href="formularz.html">Formularz</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article id="tresc"></article>
+        <script>
+            addSection("https://www.flaticon.com/svg/static/icons/svg/136/136528.svg","HyperText Markup Language jest to kod używany do tworzenia struktury strony i jej zawartości. Na przykład treść może być uporządkowana w obrębie zestawu akapitów, listy punktowanych punktów lub tabel obrazów i danych. Jak sugeruje tytuł, ten artykuł daje podstawy do zrozumienia HTML i jego funkcji.")
+            addSection("https://www.flaticon.com/svg/static/icons/svg/136/136527.svg","Czyli kaskadowe arkusze stylów (od ang. Cascading Style Sheets) to język, który wnosi styl do Twoich stron internetowych poprzez interakcję z elementami HTML. Podczas gdy HTML jest używany do tworzenia dokumentów internetowych (definiowania takich rzeczy jak nagłówki i akapity oraz osadzania obrazów, filmów i innych mediów), CSS przechodzi i określa układ strony w stylu, takich jak kolory i czcionki dokumentu.")
+            addSection("https://www.flaticon.com/svg/static/icons/svg/136/136530.svg","Jest to skryptowy język, który umożliwia obsługę dynamicznego tworzenia treści na stronie internetowej, kontrolowanie multimediów, animację obrazów i prawie wszystko inne (no dobrze, nie wszystko, ale to niesamowite, co można osiągnąć kilkoma liniami kodu JavaScript.")
+            addSection("https://www.flaticon.com/svg/static/icons/svg/136/136537.svg",'Scalable Vector Graphics to uniwersalny format dwuwymiarowej grafiki wektorowej (statycznej i animowanej), nieobwarowany licencjami i patentami. Format SVG powstał z myślą o zastosowaniu na stronach WWW. Używany jest również jako niezależny od platformy systemowej format grafiki wektorowej. SVG należy do rodziny XML, więc może być integrowany z innymi językami, jak na przykład XHTML. Dokumenty SVG posiadają rozszerzenia: .svg oraz .svgz (dokument SVG skompresowany w formacie gzip) oraz mają przypisany typ MIME: image/svg+xml (dawniej image/svg-xml). Ja wykorzystałem grafike z strony <a href="https://www.flaticon.com/">flaticon.com</a>')
+        </script>
+        <footer>Copyright © Patryk Morawski 2020</footer>
     </body>
 </html>

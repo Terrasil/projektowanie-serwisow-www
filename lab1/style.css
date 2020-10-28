@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    min-width: 840px;
+}
+
+header{
+    min-height: 194px;
+    height: 20%;
+    background-color: #22B14C;
+}
+
+.wroc{
+    position: fixed;
+    display: block;
+    float: left;
+    border: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    font-size: 100%;
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    font-size: xx-large;
+    background-color: rgb(12, 12, 12);
+    min-width: 70px;
+    min-height: 70px;
+    clip-path: polygon(0 0, 100% 0, 1% 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+h1{
+    margin-left: 20%;
+    width: 30%;
+    color: white;
+    height: 75%;
+    font-size: xx-large;
+}
+
+nav{
+    padding-right: 20%;
+    padding-left: 20%;
+    width: 60%;
+    height: 25%;
+    min-height: 48px;
+    background-color: rgb(12, 12, 12);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    float: left;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(12, 12, 12);
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    min-height: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not(.aktywny) {
+    background-color: #18662F;
+}
+nav ul li a:hover:active {
+    background-color:  #22B14C;
+  }
+nav ul li a.aktywny {
+    background-color: #22B14C;
+}
+
+.prawa {
+    float: right;
+}
+
+.lewa {
+    float: left;
+}
+
+article{
+    padding-left: 20%;
+    padding-right: 20%;
+    min-height: 80%;
+    height: auto;
+}
+
+.technologia{
+    display: block;
+    padding:5%;
+    min-height: 270px;
+    text-align: center;
+}
+
+.ikona{
+    min-width:320px;
+    width:20%;
+    float:left;
+}
+.opis{
+    min-width:320px;
+    width:60%;
+    float:left;
+    font-size: larger;
+    padding-top: 7.5%;
+    text-align: left;
+}
+
+footer{
+    margin-top: 5%;
+    padding-top: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    min-height: 100px;
+    height: 10%;
+    background-color: #22B14C;
+    color: white;
+    text-align: center;
+}
+
+.list{
+    display: inline-block;
+    border: 1px silver;
+    box-shadow: 0 0 10px 10px silver;
+    padding: 7.5%;
+    padding-top: 0%;
+    margin-top: 5%;
+    height: 100%;
+}
+
+#nadawca, .wiadomosc{
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 2.5%;
+}
+#data, #adresat, #podpis{
+    display: block;
+    float: right;
+    margin-top: 7.5%;
+}
+#adresat,#podpis{
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+#podpis{
+    padding-top: 10%;
+    padding-bottom: 30%;
+}
+
+
+a:link {
+    color: #22B14C;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: lime;
+}
+a:active {
+    color: yellowgreen;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active, .wroc:link, .wroc:visited, .wroc:hover, .wroc:active{
+    color:white;
+}
+
+@media only screen and (max-width: 1496px) {
+    #tresc{
+        text-align: center;
+    }
+    .ikona{
+        display: inline-block;
+        min-width:320px;
+        width:20%;
+        float:none;
+    }
+    .opis{
+        display: inline-block;
+        min-width:320px;
+        width:60%;
+        float:none;
+        font-size: larger;
+        padding-top: 7.5%;
+        text-align: center;
+    }
+}
+
+
+::-webkit-scrollbar{
+    width: 16px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(12, 12, 12);
+}
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #22B14C; 
+}
