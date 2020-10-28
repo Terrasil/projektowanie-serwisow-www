@@ -21,7 +21,22 @@
         </header>
         <article id="tresc">
             <section class="formularz">
-               
+               <form method="POST" action="">
+                    <div class="tlo">
+                        <label id="zgloszenie">Wyślij zgłoszenie!</label>
+                        <input type="email" pattern=".+@+." name="email" placeholder="Podaj email...">
+                        <input type="text" name="tytul" placeholder="Podaj tytuł...">
+                        <label>Priorytet zgłoszenia</label>
+                        <select name="priorytet">
+                            <option value="1">Niski</option>
+                            <option value="2">Średni</option>
+                            <option value="3">Wysoki</option>
+                        </select>
+                        <label>Treść</label>
+                        <textarea name="subject" placeholder="Napisz wiadomość..." style="height:200px"></textarea>
+                        <input type="submit" value="Wyślij">
+                    </div>
+                </form>
             </section>
         </article>
         <footer>Copyright © Patryk Morawski 2020</footer>

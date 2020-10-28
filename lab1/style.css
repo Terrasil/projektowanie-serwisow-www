@@ -131,7 +131,10 @@ footer{
     text-align: center;
 }
 
-.list{
+
+/* LIST */
+
+.strona{
     display: inline-block;
     border: 1px silver;
     box-shadow: 0 0 10px 10px silver;
@@ -161,6 +164,152 @@ footer{
     padding-bottom: 30%;
 }
 
+/* FORMULARZ */
+
+form{
+    display: inline-block;
+    border:12px solid red;
+    background-color: red;
+    border-radius: 12px;
+    margin: 10%;
+    margin-bottom: 0%;
+}
+
+.tlo{
+    display: inline-block;
+    border:12px solid white;
+    background-color: white;
+    border-radius: 6px;
+    padding: 5%;
+}
+
+label{
+    color: red;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: large;
+}
+
+#zgloszenie{
+    color: red;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: x-large;
+}
+
+input, textarea, select{
+    width: 80%;
+    padding: 12px 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+input[type="submit"]{
+    float: right;
+    width: 30%;
+}
+input[type="email"]{
+    margin-bottom: 0;
+}
+
+
+/* PODRĘCZNIK */
+
+.big-text{
+    font-size: x-large;
+}
+
+.lewo{
+    text-align: left;
+}
+.prawo{
+    text-align: right;
+}
+
+.glowna-czesc {
+    width: 70%;
+}
+.glowna-czesc img {
+    width: 100%;
+}
+.poboczna-czesc{
+    width: 30%;
+}
+.tnr{ 
+    font-family: 'Times New Roman', Times, serif;
+}
+.justowanie{ 
+    text-align: justify;
+    text-justify: inter-word;
+}
+.rozdzial{
+    margin-left: 50%;
+    margin-top: 10%;
+    margin-right: -10%;
+    text-align: left;
+}
+hr{
+    margin-left: 50%;
+    border-width: 1px;
+    margin-right: -9%;
+    border-color: gray;
+    margin-bottom: 20px;
+}
+.pierwsza::first-letter{
+    margin-left: 20px;
+}
+
+.obraz{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ciekawostka{
+    border: 1px solid silver;
+    border-collapse: collapse;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.ciekawostka *{
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ciekawostka th{
+    color: white;
+    background-color: red;
+}
+.ciekawostka td{
+    background-color: rgb(247, 235, 215);
+}
+.definicja{
+    display: inline-block;
+    padding: 8px;
+    margin-left: 10%;
+    margin-top: 10%;
+    background-color: rgb(247, 235, 215);
+}
+
+.opis-obrazka{
+    display: inline-block;
+    padding: 8px;
+    margin-left: 10%;
+    margin-top: 90%;
+    font-size: large;
+}
+.numer{
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 30%;
+    float: right;
+    font-size: large;
+    text-align: right;
+    text-orientation: unset;
+}
+/* LINKI */
 
 a:link {
     color: #22B14C;
@@ -200,6 +349,7 @@ nav a:link, nav a:visited, nav a:hover, nav a:active, .wroc:link, .wroc:visited,
     }
 }
 
+/* SCROLL */
 
 ::-webkit-scrollbar{
     width: 16px;
