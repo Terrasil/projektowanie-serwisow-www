@@ -1,10 +1,16 @@
-function addFolder(name, description, href, ready){
+window.oncontextmenu = function () { return false; } 
+document.onkeydown = function (e) { if (window.event.keyCode == 123 || e.button==2) return false; } 
+
+function addFolder(name, description, href, img, ready){
     var newDir = document.createElement("a");
     newDir.setAttribute("href", href);
     if(ready){
         newDir.setAttribute("class", "laborka gotowa");
     }else{
         newDir.setAttribute("class", "laborka");
+    }
+    if(img){
+        newDir.setAttribute("style", 'background-image:url("'+img+'");');
     }
 
     var nameElement = document.createElement("span");
