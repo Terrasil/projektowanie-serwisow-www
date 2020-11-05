@@ -70,11 +70,15 @@ const calculator = {
 
   function changeSymbol() {
     if(calculator.waitingForSecondOperand){
+      if(calculator.firstOperand!=0){
         calculator.firstOperand = -(calculator.displayValue)
         calculator.displayValue = calculator.firstOperand;
+      }
     }else{
+      if(calculator.secondOperand!=0){
         calculator.secondOperand = -(calculator.displayValue)
         calculator.displayValue = calculator.secondOperand
+      }
     }
   }
   
