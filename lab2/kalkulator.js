@@ -80,7 +80,8 @@ const calculator = {
   
   function updateDisplay() {
     const display = document.querySelector('.calculator-screen');
-    display.value = calculator.displayValue.replace('.',',');
+    display.value = calculator.displayValue;
+    display.value = display.value.replace('.',',');
   }
   
   updateDisplay();
