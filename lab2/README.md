@@ -13,7 +13,7 @@ projektowanie-serwisow-www
 
 - Plik **kalkulator.js** zawiera skrypt na stronie z kalkulatorem.
 
-- Plik **kalkulator.js** zawiera skrypt na stronie z galerią.
+- Plik **galeria.js** zawiera skrypt na stronie z galerią.
 
 - Plik **index.html** zawiera stronę główną z albumem samochodów.
 
