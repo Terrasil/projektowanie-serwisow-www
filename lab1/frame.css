@@ -3,12 +3,13 @@
 }
 header{
     height: 10%;
-    background-color: #642BAD;
+    background-color: #428bca;
+    --color:#642BAD;
     color: white;
     text-align: center;
 }
 a{
-    color: #642BAD;
+    color: #428bca;
     text-decoration:none;
 }
 
@@ -22,7 +23,7 @@ nav{
 }
 footer{
     height: 10%;
-    background-color: #642BAD;
+    background-color: #428bca;
     color: white;
     text-align: center;
 }
@@ -51,7 +52,7 @@ footer{
     background: white;
 }
 ::-webkit-scrollbar-thumb:active {
-    background: #642BAD; 
+    background: #428bca; 
 }
 
 
@@ -123,7 +124,7 @@ footer{
   }
 
   .btn-blog{
-      background-color: #642BAD;
+      background-color: #428bca;
       color: white;
       margin: 2rem;
       outline: none  !important;
