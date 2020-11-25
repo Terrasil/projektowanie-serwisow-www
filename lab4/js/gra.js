@@ -52,9 +52,6 @@
 			startStop();
 		}if (event.keyCode == 81){ //Q
 			debugging = !debugging;
-		}if (event.keyCode == 88){ //X
-			playerShot();
-			score--;
 		}
 	} );
 
@@ -163,7 +160,7 @@
 			x: e.x,
 			y: e.y,
 			hitbox: 5,
-			v: 7,
+			v: 5,
 		}
 		enemiesBullets.unshift(bullet);
 	}
@@ -195,14 +192,14 @@
 					context.stroke();
 				}
 			}
-			if(playerBullets[b].y < 0){
-				playerBullets.splice (playerBullets.indexOf(b), 1);
-			}
 			for(let e in enemies){ //kolicja pocisków gracza z przeciwnikami
 				if(distance(playerBullets[b].x,playerBullets[b].y,enemies[e].x, enemies[e].y)<playerBullets[b].hitbox+enemies[e].hitbox){
 					enemies.splice(enemies.indexOf(e), 1);
 					score+=100;
 				}
+			}
+			if(playerBullets[b].y < 0){
+				playerBullets.splice (playerBullets.indexOf(b), 1);
 			}
 		}
 	}
@@ -226,13 +223,13 @@
 				context.lineTo(enemiesBullets[eb].x, enemiesBullets[eb].y);  
 				context.stroke();
 			}
-			if(enemiesBullets[eb].y > 2800){
-				enemiesBullets.splice (enemiesBullets.indexOf(eb), 1);
-			}
 			//kolicja pocisków przeciwników z graczem
 			if(distance(enemiesBullets[eb].x,enemiesBullets[eb].y,player.x, player.y)<enemiesBullets[eb].hitbox+player.hitbox){
 				lose = true;
 				startStop();
+			}
+			if(enemiesBullets[eb].y > 2800){
+				enemiesBullets.splice (enemiesBullets.indexOf(eb), 1);
 			}
 		}
 	}
@@ -248,6 +245,22 @@
 			context.arc(player.x, player.y, player.hitbox, 0, 2 * Math.PI);
 			context.fill();
 			context.globalAlpha = 1.0;
+			//distance
+			for(let e in enemies){
+				context.beginPath();
+				context.lineWidth = "1";
+				context.strokeStyle = "#ff0000";
+				context.moveTo(player.x,player.y);
+				context.lineTo(enemies[e].x, enemies[e].y);  
+				context.stroke();
+			}
+		}
+		//kolicja przeciwników z graczem
+		for(let e in enemies){
+			if(distance(enemies[e].x,enemies[e].y,player.x, player.y)<enemies[e].hitbox+player.hitbox){
+				lose = true;
+				startStop();
+			}
 		}
 		player.x = mouse.x;
 		player.y = mouse.y;
@@ -266,9 +279,8 @@
 	}
 	function drawEnemies(){
 		for(let e in enemies){
-			drawEnemy(enemies[e])
 			enemies[e].y += enemies[e].v;
-			
+			drawEnemy(enemies[e])
 			if(enemies[e].y > 1000){
 				enemies.splice (enemies.indexOf(e), 1);
 			}
@@ -330,12 +342,12 @@
 
 		context.drawImage(img, 0, offset-img.height);
 		context.drawImage(img, 0, offset);
-		
-		playerShots();
-		enemiesShots()
 	
 		drawEnemies();
 		drawPlayer();
+		
+		playerShots();
+		enemiesShots();
 		
 		drawScore();
 		drawDebugText();
@@ -344,5 +356,6 @@
 	}
 	
 	setInterval(spawnEnemies, 1000);
-	setInterval(enemiesShot, 750);
+	setInterval(enemiesShot, 1500);
+	setInterval(playerShot,500);
 }());
