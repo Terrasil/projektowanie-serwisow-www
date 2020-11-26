@@ -42,3 +42,29 @@ Html, body{
   text-align: center;
   color: white;
 }
+
+
+
+.google{
+  color: gray !important;
+  background-color: white !important;
+  border-color: silver !important;
+}
+.google:hover {
+  color: white !important;
+  background-color: #dd4b39 !important;
+  border-color: #ff0000 !important;
+}
+.discord{
+  color: gray !important;
+  background-color: white !important;
+  border-color: silver !important;
+}
+.discord:hover {
+  color: white !important;
+  background-color: #7186d6 !important;
+  border-color: #576ebc !important;
+}
+.clear-link {
+  text-decoration: none !important;
+}
