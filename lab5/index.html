@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Patryk Morawski - Projektowanie serwisów WWW | Laboratorium 3 - Zadania</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+   </head>
+    <body>
+        <a href="../index.html" class="wroc">🡴</a>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <header class="text-center text-white">
+            <nav class="custom-padding navbar navbar-expand-lg navbar-dark bg-eletric text-right px-10">
+                <a class="navbar-brand font-weight-bold text-white">Patryk Morawski</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav float-right">
+                        <a class="nav-item nav-link active text-white" href="#zad1">Zadanie 1</a>
+                        <a class="nav-item nav-link active text-white" href="#zad2">Zadanie 2</a>
+                        <a class="nav-item nav-link active text-white" href="#zad3">Zadanie 3</a>
+                        <a class="nav-item nav-link active text-white" href="#zad4">Zadanie 4</a>
+                        <a class="nav-item nav-link active text-white" href="#zad5">Zadanie 5</a>
+                        <a class="nav-item nav-link active text-white" href="#zad6">Zadanie 6</a>
+                     </div>
+                </div>
+            </nav>
+        </header>
+       
+        <article id="tresc">
+            <section class="strona"><a name="zad1"></a>
+			<b>Zadanie 1</b> &nbsp; <i>funkcja zwrotna (callback)</i>
+			<pre>
+				<code class="hljs javascript">
+console.log("Zadanie 1");
+console.log("TASK 1");
+
+//funkcja zwracająca róznicę poiędzy liczbami (wartość bezwzględna)
+function roznica(a, b){
+	if(a > b){
+		return a - b;
+	}else{
+		return b - a;
+	}
+}
+
+let dataZalozeniaKsiegarni = json.ksiegarnia.data;
+console.log("Data założenia księgarni: " + dataZalozeniaKsiegarni);
+let dataWydaniaHobbita = json.ksiegarnia.fantasy[0].rok;
+console.log("Data wydania Hobbita: " + dataWydaniaHobbita);
+
+function ileLatTemu(funkcja){
+	funkcja(dataZalozeniaKsiegarni,dataWydaniaHobbita)
+}
+
+ileLatTemu(function(a,b){
+	console.log("Mineło: " + roznica(a,b))
+})
+
+console.log("TASK 2");
+
+let nazwaKsięgarni = json.ksiegarnia.nazwa;
+console.log("Nazwa księgarni: " + nazwaKsięgarni);
+let nazwaDrugiejKsiazkiFantasy = json.ksiegarnia.fantasy[1].nazwa;
+console.log("Nazwa drugiej książki fantasy: " + nazwaDrugiejKsiazkiFantasy);
+
+function okazja(funkcja){
+	funkcja(nazwaKsięgarni,nazwaDrugiejKsiazkiFantasy)
+}
+
+okazja(function(a,b){
+	const text = `W księgarni ${a} jest przecena na ${b} -50%.`;
+	console.log(text)
+})
+				</code>
+			</pre>
+            </section>
+            <section class="strona"><a name="zad2"></a>
+            <b>Zadanie 2</b> &nbsp; <i>obiekt Promise (resolve, reject) z metodami then(), catch() i finally() + axios (lub fetch)</i>
+			<pre>
+				<code class="hljs javascript">
+let postId, userId, postTitle, postBody;
+
+fetch('https://jsonplaceholder.typicode.com/posts/17')
+.then(response => response.json())
+.then(postData => {
+	postId = postData.id;
+	userId = postData.userId;
+	postTitle = postData.title;
+	postBody = postData.body;
+})
+.catch(function(error){console.error(error)})
+.finally(function(){
+	console.log("Załadowano Post")
+	console.log("ID: " + postId)
+	console.log("UserID: " + userId)
+	console.log("Title: " + postTitle)
+	console.log("Body: " + postBody)
+})
+
+console.log("TASK 1");
+
+function power(base, exponent) {
+	var result = 1;
+	if(exponent == undefined){
+		exponent = 2;
+	}
+	for(var i=1; i<=exponent; i++) {
+		result = result * base;
+	}
+	return result;
+}
+
+function getPost(getId){
+	return new Promise((resolve, reject) => {
+		if (getId == userId){
+			resolve(power(userId, postId))
+		}else{
+			reject('Nie znaleziono postu od podanego uzytkownika!')
+		}
+	});
+}
+//oczekiwanie na odebranie danych 0.5s
+setTimeout(() => {
+	console.log("Zadanie 2 task1")
+
+	getPost(userId).then(data => console.log('ID Użytkownika do potęgi ID Postu to: ', data));
+	getPost(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+	getPost(userId).finally(() => console.log('Koniec'));	  
+}, 500);
+
+console.log("TASK 2");
+
+function newObject(title, body) {
+	var object = { 
+		nazwa: title, 
+		opis: body 
+	};
+	return object;
+}   
+
+function getPostWithCreateNewObject(getId) {
+	return new Promise((resolve, reject) => {
+		if (getId == userId) {
+			resolve(newObject(postTitle, postBody));
+		} else {
+			reject('Nie znaleziono postu od podanego uzytkownika! Nie można stworzyć nowego objektu!')
+		}
+	});
+}
+
+//oczekiwanie na odebranie danych 1s
+setTimeout(() => {
+	console.log("Zadanie 2 task2");
+	
+	getPostWithCreateNewObject(userId).then(data => 
+		console.log('Tworzenie nowego objektu z pobranych danych postu użytkownika: ', data));
+	getPostWithCreateNewObject(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+	getPostWithCreateNewObject(userId).finally(() => console.log('Koniec'));	  
+}, 1000);
+				</code>
+			</pre>
+            </section>
+            <section class="strona"><a name="zad3"></a>
+			<b>Zadanie 3</b> &nbsp; <i>async/await + fetch (lub axios)</i>
+			<pre>
+				<code class="hljs javascript">
+var url = 'https://jsonplaceholder.typicode.com/posts/13';
+
+async function asyncAndAwait(url) {
+	let response = await fetch(url);
+	if (response.ok) {
+		var objectJSON = await response.json();
+		postId = objectJSON.id;
+		userId = objectJSON.userId;
+		postTitle = objectJSON.title;
+		postBody = objectJSON.body;
+		
+		console.log("TASK 1");
+		getPost(userId).then(data => console.log('ID Użytkownika do potęgi ID Postu to: ', data));
+		getPost(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPost(userId).finally(() => console.log('Koniec asyncAndAwait Task 1'));
+		
+		console.log("TASK 2");
+		getPostWithCreateNewObject(userId).then(data => 
+			console.log('Tworzenie nowego objektu z pobranych danych postu użytkownika: ', data));
+		getPostWithCreateNewObject(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPostWithCreateNewObject(userId).finally(() => console.log('Koniec asyncAndAwait Task 2'));	  
+	}
+}
+
+//oczekiwanie na odebranie danych 1.5s
+setTimeout(() => {
+	console.log("Zadanie 3");
+
+	asyncAndAwait(url);
+}, 1500);   
+
+				</code>
+			</pre>
+            </section>
+            <section class="strona"><a name="zad4"></a>
+			<b>Zadanie 4</b> &nbsp; <i>Zapytania AJAX</i>
+			<pre>
+				<code class="hljs javascript">
+let newUrl = 'https://jsonplaceholder.typicode.com/posts/25';
+
+let xmlhttprequest = new XMLHttpRequest();
+
+//oczekiwanie na odebranie danych 2s
+setTimeout(() => {
+	console.log("Zadanie 4");
+	
+	xmlhttprequest.open('GET', newUrl);
+
+	xmlhttprequest.responseType = 'json';
+	xmlhttprequest.send();
+
+	xmlhttprequest.onload = function() {
+		let objectJSON = xmlhttprequest.response;
+		postId = objectJSON.id;
+		userId = objectJSON.userId;
+		postTitle = objectJSON.title;
+		postBody = objectJSON.body;	
+		
+		console.log("TASK 1");
+		getPost(userId).then(data => console.log('ID Użytkownika do potęgi ID Postu to: ', data));
+		getPost(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPost(userId).finally(() => console.log('Koniec XMLHttpReques Task 1'));
+		
+		console.log("TASK 2");
+		getPostWithCreateNewObject(userId).then(data => 
+			console.log('Tworzenie nowego objektu z pobranych danych postu użytkownika: ', data));
+		getPostWithCreateNewObject(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPostWithCreateNewObject(userId).finally(() => console.log('Koniec XMLHttpReques Task 2'));	
+	};
+	xmlhttprequest.onerror = function() {
+	  console.log("Error XMLHttpReques!"); 
+	};
+}, 2000);    
+				</code>
+			</pre>
+            </section>
+            <section class="strona"><a name="zad5"></a>
+			<b>Zadanie 5</b> &nbsp; <i>metoda fetch</i>
+			<pre>
+				<code class="hljs javascript">
+//oczekiwanie na odebranie danych 2.5s
+setTimeout(() => {
+	console.log("Zadanie 5");
+	
+	fetch('https://jsonplaceholder.typicode.com/posts/33')
+	.then(response => response.json())
+	.then(postData => {
+		postId = postData.id;
+		userId = postData.userId;
+		postTitle = postData.title;
+		postBody = postData.body;
+	})
+	.catch(function(error){console.error(error)})
+	.finally(function(){
+		getPost(userId).then(data => console.log('ID Użytkownika do potęgi ID Postu to: ', data));
+		getPost(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPost(userId).finally(() => console.log('Koniec fetch Task 1'));
+		
+		console.log("TASK 2");
+		getPostWithCreateNewObject(userId).then(data => 
+			console.log('Tworzenie nowego objektu z pobranych danych postu użytkownika: ', data));
+		getPostWithCreateNewObject(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPostWithCreateNewObject(userId).finally(() => console.log('Koniec fetch Task 2'));
+	})
+}, 2500);  
+				</code>
+			</pre>
+            </section>
+            <section class="strona"><a name="zad6"></a>
+			<b>Zadanie 6</b> &nbsp; <i>bibliotexa axios</i>
+			<pre>
+				<code class="hljs javascript">
+let nextUrl = 'https://jsonplaceholder.typicode.com/posts/27';
+
+//oczekiwanie na odebranie danych 3s
+setTimeout(() => {
+	console.log("Zadanie 6");
+	
+	axios.get(nextUrl)
+	.then(function (response) {
+		postId = response.data.id;
+		userId = response.data.userId;
+		postTitle = response.data.title;
+		postBody = response.data.body;	
+		console.log("TASK 1");
+		getPost(userId).then(data => console.log('ID Użytkownika do potęgi ID Postu to: ', data));
+		getPost(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPost(userId).finally(() => console.log('Koniec Axios Task 1'));
+		
+		console.log("TASK 2");
+		getPostWithCreateNewObject(userId).then(data => 
+			console.log('Tworzenie nowego objektu z pobranych danych postu użytkownika: ', data));
+		getPostWithCreateNewObject(9).catch(data => console.log('Błędne podanie id ID Użytkownika: ', data));
+		getPostWithCreateNewObject(userId).finally(() => console.log('Koniec Axios Task 2'));
+	})
+	.catch(function (error) {
+		console.log("Error AXIOS: ", error);
+	})
+	.then(function () {
+		console.log("Koniec AXIOS!");
+	});
+}, 3000);
+				</code>
+			</pre>
+            </section>
+        </article>
+        <footer>Copyright © Patryk Morawski 2020</footer>
+        <script src="json.js" type="text/javascript"></script>
+        <script src="zadania.js" type="text/javascript"></script>
+		
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
