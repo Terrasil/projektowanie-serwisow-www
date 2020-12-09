@@ -1,0 +1,125 @@
+@font-face{
+    font-family: titleFont;
+    src: url(./fonts/Atmospheric.ttf);
+}
+.show{
+    padding: 2rem;
+    max-height: 24rem;
+    min-height: 24rem;
+}
+
+/* Jasny motyw */
+
+.light-theme .bg{
+    display: block;
+    background-color: white;
+    min-height: 86vh !important;
+    padding-top: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: -3rem;
+}
+.light-theme .sep{
+    background-color: white;
+    text-align: right;
+    padding: 1rem;
+}
+.light-theme header{
+    background-color: rgb(130, 56, 167) !important;
+    min-height: 14vh !important;
+}
+.light-theme header img{
+    max-height: 14vh !important;
+    margin: 1rem !important;
+    margin-left: 3rem !important;
+}
+.light-theme header .name{
+    margin: 1rem !important;
+    margin-left: 2rem !important;
+    padding: 1.5rem;
+    font-family: titleFont;
+    color: white;
+}
+.light-theme .element{
+    color: black;
+    background-color: rgb(234, 234, 234);
+    max-height: 24rem;
+    min-height: 24rem;
+}
+.light-theme footer {
+    padding-top: 20px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    min-height: 100px;
+    height: 10wh;
+    background-color: rgb(130, 56, 167) !important;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Ciemny motyw */
+
+.dark-theme .bg{
+    display: block;
+    background-color: rgb(32,32,32);
+    min-height: 86vh !important;
+    padding-top: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: -3rem;
+}
+.dark-theme .sep{
+    background-color: rgb(32,32,32);
+    text-align: right;
+    padding: 1rem;
+}
+.dark-theme header{
+    background-color: rgb(170, 0, 255) !important;
+    min-height: 14vh !important;
+}
+.dark-theme header img{
+    max-height: 14vh !important;
+    margin: 1rem !important;
+    margin-left: 3rem !important;
+}
+.dark-theme header .name{
+    margin: 1rem !important;
+    margin-left: 2rem !important;
+    padding: 1.5rem;
+    font-family: titleFont;
+    color: rgb(32,32,32);
+}
+.dark-theme .element{
+    color: white;
+    background-color: rgb(24, 24, 24);
+    max-height: 24rem;
+    min-height: 24rem;
+}
+.dark-theme footer {
+    padding-top: 20px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    min-height: 100px;
+    height: 10wh;
+    background-color: rgb(170, 0, 255) !important;
+    color: rgb(32,32,32);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+::-webkit-scrollbar{
+    width: 16px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(12, 12, 12);
+}
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgb(64, 64, 64); 
+}
