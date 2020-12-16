@@ -12,7 +12,7 @@ Po za postawowymi modułami npm skożystałem również z:
 
 ### Zmiany w aplikacji
 
-#### Wykorzystałem poprzednią aplikację z (Labolatorium 7)()
+#### Wykorzystałem poprzednią aplikację z (Labolatorium 6)
 
 Poprzedni kod:
 
