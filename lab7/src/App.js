@@ -2,10 +2,11 @@ import React from 'react'
 import {Button} from 'react-bootstrap'
 import {Footer, Header, Strona} from './Komponenty'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {Container, Card,CardActions, CardMedia,CardContent,Typography, Grid, TextField, Button as ButtonMUI} from "@material-ui/core"
+import {Container, Card,InputAdornment, CardMedia,CardContent,Typography, Grid, TextField, Button as ButtonMUI} from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
 
 import placeholder from "./images/placeholder.png"
+import { AccountCircle, LockRounded } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     icon: {
@@ -126,8 +127,8 @@ function Login() {
                         <Grid container justify="center">
                             <h2>Panel Logowania</h2>
                         </Grid>
-                        <TextField label='Login' margin='normal'/> {/* <TextField> z ModernUI*/}
-                        <TextField label='Hasło' margin='normal'/>
+                        <TextField label='Login' margin='normal' InputProps={{startAdornment:<InputAdornment><AccountCircle/></InputAdornment>}}/> {/* <TextField> z ModernUI*/}
+                        <TextField label='Hasło' margin='normal' InputProps={{startAdornment:<InputAdornment><LockRounded/></InputAdornment>}}/> {/* Dodatkowo ikony */}
                     <div style={{height:20}}/>
                         <ButtonMUI variant='contained' style={{margin:'auto',display:'flex', flexDirection:'column', maxWidth:240, minWidth:240}}> {/* <Button> z ModernUI*/}
                             Zaloguj
