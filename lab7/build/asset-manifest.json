@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/projektowanie-serwisow-www/lab6/static/css/main.09dffdac.chunk.css",
+    "main.js": "/projektowanie-serwisow-www/lab6/static/js/main.c70329bd.chunk.js",
+    "main.js.map": "/projektowanie-serwisow-www/lab6/static/js/main.c70329bd.chunk.js.map",
+    "runtime-main.js": "/projektowanie-serwisow-www/lab6/static/js/runtime-main.6eaa9405.js",
+    "runtime-main.js.map": "/projektowanie-serwisow-www/lab6/static/js/runtime-main.6eaa9405.js.map",
+    "static/css/2.991e4262.chunk.css": "/projektowanie-serwisow-www/lab6/static/css/2.991e4262.chunk.css",
+    "static/js/2.db0a421a.chunk.js": "/projektowanie-serwisow-www/lab6/static/js/2.db0a421a.chunk.js",
+    "static/js/2.db0a421a.chunk.js.map": "/projektowanie-serwisow-www/lab6/static/js/2.db0a421a.chunk.js.map",
+    "static/js/3.b1a75910.chunk.js": "/projektowanie-serwisow-www/lab6/static/js/3.b1a75910.chunk.js",
+    "static/js/3.b1a75910.chunk.js.map": "/projektowanie-serwisow-www/lab6/static/js/3.b1a75910.chunk.js.map",
+    "index.html": "/projektowanie-serwisow-www/lab6/index.html",
+    "static/css/2.991e4262.chunk.css.map": "/projektowanie-serwisow-www/lab6/static/css/2.991e4262.chunk.css.map",
+    "static/css/main.09dffdac.chunk.css.map": "/projektowanie-serwisow-www/lab6/static/css/main.09dffdac.chunk.css.map",
+    "static/js/2.db0a421a.chunk.js.LICENSE.txt": "/projektowanie-serwisow-www/lab6/static/js/2.db0a421a.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/projektowanie-serwisow-www/lab6/static/media/Atmospheric.f7d9830b.ttf",
+    "static/media/lg_k41s.f73a0988.png": "/projektowanie-serwisow-www/lab6/static/media/lg_k41s.f73a0988.png",
+    "static/media/motorola_e7_plus.4328b82f.png": "/projektowanie-serwisow-www/lab6/static/media/motorola_e7_plus.4328b82f.png",
+    "static/media/oppo_a31.49908350.png": "/projektowanie-serwisow-www/lab6/static/media/oppo_a31.49908350.png",
+    "static/media/samsung_galaxy_a20s.3e6d5e22.png": "/projektowanie-serwisow-www/lab6/static/media/samsung_galaxy_a20s.3e6d5e22.png",
+    "static/media/xiaomi_redmi_note_9_pro.a1aaff61.png": "/projektowanie-serwisow-www/lab6/static/media/xiaomi_redmi_note_9_pro.a1aaff61.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6eaa9405.js",
+    "static/css/2.991e4262.chunk.css",
+    "static/js/2.db0a421a.chunk.js",
+    "static/css/main.09dffdac.chunk.css",
+    "static/js/main.c70329bd.chunk.js"
+  ]
+}
