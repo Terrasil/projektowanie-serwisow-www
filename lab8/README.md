@@ -12,6 +12,8 @@ Po za modułami npm z poprzednich zadań skożystałem również z:
 
 #### Nowa zakladka *"Ukryta wiadomość"* 
 
+![0](https://i.imgur.com/b3QlvT7.png)
+
 Wyświetla okno z przykładowym tytułem i tekstem (*lorem ipsum*).
 Możliwe jest showanie, pokazanie, rozszeżenie i zwinięcie okna aby podejżeć więcej informacji.
 
